@@ -4,9 +4,9 @@ import { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ({ defaultCategorys = 'Rick and Morty' }) => {
 
-    const [categorys, setCategory] = useState(["Rick & Morty"]);
+    const [categorys, setCategory] = useState([ defaultCategorys ]);
 
     // const addCategory = () => {
     //     setCategoria(

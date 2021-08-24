@@ -1,4 +1,5 @@
 import React, { Fragment} from 'react';
+import PropTypes from "prop-types";
 
 import { useFetchGifs } from '../hooks/useFetchGifs';
 import { GifGridItem } from "./GifGridItem";
@@ -13,6 +14,7 @@ import { GifGridItem } from "./GifGridItem";
 
 export const GifGrid = ({ category }) => {
 
+    //useFetchGifs me traera la información de mis gifs
     const { data:images, loading } = useFetchGifs( category )
 
     return (
@@ -23,6 +25,7 @@ export const GifGrid = ({ category }) => {
 
             <div className="card-grid">
                 { //También puedes extraer las propiedades en img --> {id, title}
+                //Manda como parametros la url:img, y el titulo:id a nuestro <GifGridItem>
                 images.map( img => ( 
                     <GifGridItem
                         key={img.id} 
@@ -34,6 +37,10 @@ export const GifGrid = ({ category }) => {
            
         </Fragment>
     )
+}
+
+GifGrid.propTypes = {
+    category: PropTypes.string.isRequired
 }
 
 // const [images, setImages] = useState([])

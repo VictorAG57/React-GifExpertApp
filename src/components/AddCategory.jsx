@@ -18,6 +18,7 @@ export const AddCategory = ({ setCategory }) => {
     //Lo escrito por el usuario
     const handleInputChange = (e)=> {
         setInputValue(e.target.value)
+        console.log("handleInputChange llamado")
     };
 
     //Cambiamos el estado con "handleSubmit", agregamos un elemento más al etsado
@@ -33,6 +34,7 @@ export const AddCategory = ({ setCategory }) => {
             //primero que aparezac sea la ultima busqueda y no aparezca hasta el final
             setCategory( cats => [ inputValue, ...cats])
             setInputValue("")
+            console.log("setCategory llamado")
         }
     };
 

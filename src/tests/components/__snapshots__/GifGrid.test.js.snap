@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Debe de renderizar el componente <GifGrid></GifGrid> Debe de mostrar correctamente el componente y snapShot  1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__bounce animate__delay-2s"
+  >
+    Rick and Morty
+  </h3>
+  <p
+    className="animate__fadeInRight"
+  >
+    Loading
+  </p>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;
+
+exports[`Debe de renderizar el componente <GifGrid></GifGrid> Debe de mostrar items cuando se carga useFetchGifs (<GifGrid></GifGrid>) 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__bounce animate__delay-2s"
+  >
+    Rick and Morty
+  </h3>
+  <p
+    className="animate__fadeInRight"
+  >
+    Loading
+  </p>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="ABC"
+      key="ABC"
+      title="Hola mundo"
+      url="https://lago.jpg"
+    />
+  </div>
+</Fragment>
+`;
